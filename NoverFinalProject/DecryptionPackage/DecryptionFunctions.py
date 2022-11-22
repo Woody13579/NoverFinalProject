@@ -8,3 +8,17 @@ Brief Description: We can collaborate with a team to develop an Eclipse app and 
 Citations:
 Anything else that's relevant:
 '''
+
+
+def EnglishList(filename):
+    #define text file to open
+    my_file = open('english.txt', 'r')
+    
+    #read text file into list
+    data = my_file.read()
+    
+    #create an empty list and delimit the string into its elements
+    newList = []
+    newList = data.split('\n')
+    return newList
+
