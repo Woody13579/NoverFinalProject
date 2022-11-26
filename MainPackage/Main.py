@@ -10,3 +10,15 @@ Anything else that's relevant:
 '''
 
 from FunctionPackage.DecryptionFunctions import *
+
+NoverList = TeamResults('Nover', 'EncryptedGroupHints.json')
+NoverListInt = []
+# Need to convert the string results from the json file to integers to be usable for indexing later
+# reference website for the for-loop : https://www.pythonforbeginners.com/basics/convert-a-list-of-strings-to-ints-in-python
+for string in NoverList:
+    is_digit = string.isdigit()
+    if is_digit:
+        integer = int(string)
+        NoverListInt.append(integer)
+    else:
+        print('String Conversion Issue')

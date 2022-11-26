@@ -9,13 +9,12 @@ Citations:
 Anything else that's relevant:
 '''
 # DecryptionFunctions.py
-
+import json
 
 # Code from https://www.geeksforgeeks.org/read-json-file-using-python/
-import json
-def TeamResults(TeamName):
+def TeamResults(TeamName, Filename):
     # json.load(_io)
-    io = open("C:/Users/Matthew Cox/git/NoverFinalProject/NoverFinalProject/MainPackage/EncryptedGroupHints.json")
+    io = open(Filename)
     dictionary = json.load(io)
     
     # or one-liner
@@ -26,13 +25,25 @@ def TeamResults(TeamName):
 
 # Code to Import List of English words
 def EnglishList(filename):
-    #define text file to open
-    my_file = open('english.txt', 'r')
-    
-    #read text file into list
+    my_file = open(filename, 'r')
     data = my_file.read()
     
     #create an empty list and delimit the string into its elements
     newList = []
     newList = data.split('\n')
     return newList
+
+
+# Function to slice the English list by the numbers gathered from the JSON file using indexing
+def LocationLookup(NameOfList, NameOfDictionary):
+    for index in NameOfDictionary:
+        IndexingVariable = index - 1
+        Word = NameOfList[IndexingVariable]
+        print(Word)
+
+    
+    
+    
+    
+    
+    
