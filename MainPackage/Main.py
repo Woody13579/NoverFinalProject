@@ -22,3 +22,9 @@ for string in NoverList:
         NoverListInt.append(integer)
     else:
         print('String Conversion Issue')
+        
+NewNover = EnglishList('english.txt')
+print(NewNover)
+
+NoverLocs = LocationLookup(NewNover, NoverListInt)
+print(NoverLocs)
