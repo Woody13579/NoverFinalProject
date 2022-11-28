@@ -24,7 +24,7 @@ for string in NoverList:
         print('String Conversion Issue')
         
 NewNover = EnglishList('english.txt')
-print(NewNover)
+# print(NewNover)
 
 NoverLocs = LocationLookup(NewNover, NoverListInt)
 print(NoverLocs)
