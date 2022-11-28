@@ -37,7 +37,7 @@ def EnglishList(filename):
 # Function to slice the English list by the numbers gathered from the JSON file using indexing
 def LocationLookup(NameOfList, NameOfDictionary):
     for index in NameOfDictionary:
-        IndexingVariable = index - 1
+        IndexingVariable = index
         Word = NameOfList[IndexingVariable]
         print(Word)
 
