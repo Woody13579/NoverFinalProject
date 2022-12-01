@@ -10,6 +10,7 @@ Anything else that's relevant:
 '''
 
 from FunctionPackage.DecryptionFunctions import *
+from PIL import Image, ImageFilter, ImageDraw, ImageFont
 
 NoverList = TeamResults('Nover', 'EncryptedGroupHints.json')
 NoverListInt = []
@@ -28,3 +29,6 @@ NewNover = EnglishList('english.txt')
 
 NoverLocs = LocationLookup(NewNover, NoverListInt)
 print(NoverLocs)
+
+Nover = Image.open('NoverZimmer.png')
+Nover.show()
